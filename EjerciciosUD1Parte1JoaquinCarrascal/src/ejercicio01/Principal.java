@@ -10,7 +10,7 @@ public class Principal {
 		int suma;
 		
 		int menos1 = 0;
-	 //Variables Variadas
+	 //VariablesVariadas
 		suma = num3 + num5 + num9;
 		menos1 = suma - 1;
 	
