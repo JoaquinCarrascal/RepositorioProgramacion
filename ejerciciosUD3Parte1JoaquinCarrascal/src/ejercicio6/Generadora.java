@@ -21,12 +21,19 @@ public class Generadora {
 	public boolean generarParesYNones(int numUsu) {
  
 		//par = true //impar = false
-		boolean result;
 		if((generarAleatorio(0,10) + numUsu)%2==0)
-			return result = true;
+			return true;
 		else
-			return result = false;
+			return false;
 	
+	}
+	
+	public boolean jugarALosChinos(int numUsu, int prediccionUsu) {
+		
+		if((generarAleatorio(0,3) + generarAleatorio(0,3) + numUsu)==prediccionUsu)
+			return true;
+		else
+			return false;
 	}
 	
 	

@@ -16,8 +16,9 @@ public class Principal {
 		Generadora gen = new Generadora();
 		String aux,
 			menMsg1 = "Jugar a la primitiva.",
-			menMsg2 = "Jugar a pares y nones.";
-		int casoSalida = 0,numUsuMenu, numTopePrimitiva=6,desde,hasta,menuParesNones=0,numUsu = 0;
+			menMsg2 = "Jugar a pares y nones.",
+			menMsg3 = "Jugar a los chinos.";
+		int casoSalida = 0,numUsuMenu, numTopePrimitiva=6,desde,hasta,menuParesNones=0,numUsu = 0,prediccionUsu;
 		
 		System.out.println("Bienvenido al programa de juegos.");
 		System.out.println("---------------------------------");
@@ -26,7 +27,7 @@ public class Principal {
 			
 			System.out.printf("1.- %s\n"
 					 		+ "2.- %s\n"
-					 		+ "",menMsg1,menMsg2);
+					 		+ "3.- %s\n",menMsg1,menMsg2,menMsg3);
 	
 			aux = tcl.nextLine();
 			numUsuMenu = Integer.parseInt(aux);
@@ -60,6 +61,9 @@ public class Principal {
 									 + "0.- Salir.\n");
 					aux = tcl.nextLine();
 					menuParesNones = Integer.parseInt(aux);
+					System.out.println("Introduzca el número con el que quiere jugar:");
+					aux = tcl.nextLine();
+					numUsu = Integer.parseInt(aux);
 					switch(menuParesNones) {
 					case 1:
 						if(gen.generarParesYNones(numUsu) == true)
@@ -70,17 +74,44 @@ public class Principal {
 						break;
 						
 					case 2:
+						if(gen.generarParesYNones(numUsu) == false)
+							System.out.println("¡Ganaste!");
+						else
+							System.out.println("¡Perdiste!");
 						break;
 						
 					case 0:
 						System.out.println("Saliendo...");
 						break;
 						
-						default:
-							System.out.println("¡Vaya!, parece que el número introducido no corresponde con ninguna opción, inténtelo de nuevo.");
+					default:
+						System.out.println("¡Vaya!, parece que el número introducido no corresponde con ninguna opción, inténtelo de nuevo.");
 					}
 				}while(menuParesNones != casoSalida);
 				break;
+			
+			case 3:
+				System.out.println(menMsg3);
+				
+				System.out.println("¿Con qué número quieres jugar?(entre el 0 y el 3).");
+				aux = tcl.nextLine();
+				numUsu = Integer.parseInt(aux);
+				System.out.println("¿Qué número crees que es el total?");
+				aux = tcl.nextLine();
+				prediccionUsu = Integer.parseInt(aux);
+				
+				if (gen.jugarALosChinos(numUsu, prediccionUsu)==true)
+					System.out.println("¡Has ganado!");
+				else
+					System.out.println("¡Otra vez será!");
+				break;
+				
+			case 0:
+				System.out.println("Saliendo...");
+				break;
+				
+			default: 
+				System.out.println("¡Vaya! parece que el número introducido no corresponde con ninguna opción, inténtelo de nuevo.");
 			}
 			
 		}while(numUsuMenu != casoSalida);
