@@ -89,7 +89,7 @@ public class Principal {
 				
 			case 4:
 				System.out.println(menuMsg4);
-				System.out.printf("Su saldo es de: %.2f €.",ges.getreservoir());
+				ges.printReservoir();
 				System.out.println("\n");
 				break;
 				

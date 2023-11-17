@@ -46,5 +46,9 @@ public class Gestor
 		
 	}
 	
+	public void printReservoir() {
+		System.out.printf("Su saldo es de: %.2f €.",getreservoir());
+	}
+	
 	
 }
