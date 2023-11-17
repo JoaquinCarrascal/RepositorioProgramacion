@@ -8,7 +8,7 @@ public class Alumno {
 	private String nombre;
 	private int edad;
 	private double notaMedia;
-	private boolean matriculado;
+	//private boolean matriculado;
 	
 	//constructores para crear un objeto con valores
 	//lo que va dentro del parentesis se llaman parámetros

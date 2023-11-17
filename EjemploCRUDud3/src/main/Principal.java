@@ -23,7 +23,7 @@ public class Principal {
 		cp.add(p1, 0);
 		cp.add(p2, 1);
 		
-		
+		keyB.close();
 	}
 
 }

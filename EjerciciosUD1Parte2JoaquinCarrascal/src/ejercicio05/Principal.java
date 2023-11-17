@@ -36,7 +36,7 @@ public class Principal {
 		System.out.printf("\nUsted tendrá %.2f euros a final de año en su cuenta.\n",saldoFinAno);
 		System.out.println("\n\tGracias por usar el programa :):");
 		
-		
+		tecl.close();
 	}
 
 }

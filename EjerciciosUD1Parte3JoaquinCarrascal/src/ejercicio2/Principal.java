@@ -33,9 +33,7 @@ public class Principal {
 		System.out.printf("\nEl objeto recorrerá %.2f metros, en esos %.2f segundos.",espacioFin,tiempo);
 		System.out.println("\n----------------------------------------------------------------------");
 		System.out.println("Gracias por usar el programa :):");
-		
-		
-
+		tecl.close();
 	}
 
 }

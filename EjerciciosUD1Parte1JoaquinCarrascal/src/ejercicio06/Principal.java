@@ -37,6 +37,7 @@ public class Principal {
 		System.out.printf("Su producto costará %.2f euros con el descuento del 20%c%c\n",
 				precFinal,porcent,punto);
 		System.out.println("\nGracias por usar el programa :):");
+		teclado.close();
 	}
 
 }

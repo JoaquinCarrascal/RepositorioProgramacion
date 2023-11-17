@@ -89,6 +89,7 @@ public class Principal {
 	System.out.println("\n--------------------------------------------------------");
 	System.out.println("¡Disfrute de su comida!");
 	System.out.println("Gracias por venir a McDonals :):");
+	tecl.close();
 	}
 
 }
