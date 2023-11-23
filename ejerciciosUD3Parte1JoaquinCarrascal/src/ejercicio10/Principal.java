@@ -1,5 +1,7 @@
 package ejercicio10;
 
+import java.util.Random;
+
 /*10. Este programa tendría otra serie de clases, pero por simplificar lo haremos solo con 3 clases. Crear un
 	programa que simule una máquina vendedora de tickets de metro. Tendremos que crear la clase Ticket
 	(Clase POJO), la clase Maquina (donde estarán todos los métodos con funcionalidad) y la clase principal
@@ -21,8 +23,10 @@ public class Principal {
 	public static void main(String[] args) 
 	{
 		
-		
+		System.out.println("Bienvenido a la terminal de Renfe.");
+		System.out.println();
 
+		
 	}
 
 }
