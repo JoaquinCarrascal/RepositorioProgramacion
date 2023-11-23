@@ -3,9 +3,11 @@ package ejercicio10;
 public class Maquina 
 {
 
-	public void imprimirLogo() {
-		System.out.println("\n");
+	public double calcPrecioBilletes(int numPersonas,double precBillete) {
+		return numPersonas * precBillete;
 	}
 	
-	
+	public double calcularVuelta(double dinClient, double precBilltot) {
+		return dinClient - precBilltot;
+	}
 }
