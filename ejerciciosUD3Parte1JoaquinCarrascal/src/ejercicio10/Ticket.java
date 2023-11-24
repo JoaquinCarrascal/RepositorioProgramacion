@@ -25,5 +25,8 @@ public class Ticket {
 	public void setPrecioUnit(double precioUnit) {
 		this.precioUnit = precioUnit;
 	}
-
+	
+	public double calcPrecioBilletes(int numPersonas) {
+		return numPersonas * precioUnit;
+	}
 }
