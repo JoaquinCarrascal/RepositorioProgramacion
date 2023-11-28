@@ -39,11 +39,25 @@ public class Tienda {
 		}
 	}
 	
-	public boolean comprobarFragilidad(int posicionProducto) {
-		if(lista[posicionProducto].isFragilidad())
-		return true;
+	public boolean comprobarFragilidad(String nombreProd) {
+		if(lista[findByName(nombreProd)].isFragilidad())
+			return true;
 		else
-		return false;
+			return false;
+	}
+	public int findByName(String nombreProd) {
+		int i = 0;
+		boolean encontrado = false;
+		while(i < nPs && !encontrado) {
+			if(lista[i].getNombre().equalsIgnoreCase(nombreProd))
+				encontrado = true;
+			else
+				i++;
+		}
+		if(encontrado)
+			return i;
+		else
+			return -1;
 	}
 	
 	
