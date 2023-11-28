@@ -8,9 +8,8 @@ public class Producto {
 	private boolean fragilidad;
 	private boolean activo;
 	
-	public Producto(double precioBase, double precioCoste, String nombre, boolean fragilidad, boolean activo) {
+	public Producto(double precioBase, String nombre, boolean fragilidad, boolean activo) {
 		this.precioBase = precioBase;
-		this.precioCoste = precioCoste;
 		this.nombre = nombre;
 		this.fragilidad = fragilidad;
 		this.activo = activo;
