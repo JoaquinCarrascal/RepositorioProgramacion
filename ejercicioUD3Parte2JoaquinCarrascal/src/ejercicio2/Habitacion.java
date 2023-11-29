@@ -2,9 +2,10 @@ package ejercicio2;
 
 public class Habitacion {
 
+
+	private double precio;
 	private String tipo;
 	private boolean extra;
-	private double precio;
 	private String clienteAsig;
 	private int diasAlq;
 	private boolean limpieza;
