@@ -51,7 +51,7 @@ public class Hotel {
 	public int findById(int iD) {
 		int i = 0;
 		boolean encontrado = false;
-		while (!encontrado && i < lista.length) {
+		while (!encontrado && i < contadorOcup) {
 			if (iD == lista[i].getiD())
 				encontrado = true;
 			else
@@ -79,7 +79,7 @@ public class Hotel {
 	public void mostrarListaSinAlquilar() {
 		for (int i = 0; i < contadorOcup; i++) {
 			if(!lista[i].isAlquilada())
-			System.out.println(lista[i].toString());	
+			System.out.println(lista[i]);
 		}
 	}
 
