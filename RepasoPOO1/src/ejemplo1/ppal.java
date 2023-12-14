@@ -15,11 +15,15 @@ public class ppal {
 
 		Producto[] lista = new Producto[tam];
 		Producto p1 = new Producto("Lechuga", 1.20, 1, true);
+		Producto p2 = new Producto("Iphone 14", 916.95, 2, true);
 		Tienda tien = new Tienda(lista, 10);
 		tien.agregarProd(p1);
+		tien.agregarProd(p2);
 
 		do {
-			System.out.println("1 agregar producto");
+			System.out.println("1 agregar producto\n"
+							 + "2 mostrar lista\n"
+							 + "3 ");
 			aux = sc.nextLine();
 			casoMenu = Integer.parseInt(aux);
 			switch (casoMenu) {
@@ -39,6 +43,14 @@ public class ppal {
 				else
 					estado = false;
 				tien.agregarProd(new Producto(nombre, precio, tipo, estado));
+				break;
+				
+			case 2:
+				tien.mostrarLista();
+				break;
+				
+			case 3:
+				
 				break;
 
 			case 0:

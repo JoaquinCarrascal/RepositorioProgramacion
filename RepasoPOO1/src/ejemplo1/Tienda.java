@@ -36,5 +36,10 @@ public class Tienda {
 		}
 	}
 	
+	public void mostrarLista() {
+		for (int i = 0; i < numProd; i++) {
+			System.out.println(lista[i]);
+		}
+	}
 	
 }
