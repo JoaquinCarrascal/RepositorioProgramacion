@@ -10,7 +10,7 @@ public class ppal {
 		Scanner sc = new Scanner(System.in);
 		String aux, nombre;
 		double precio;
-		int casoSalida = 0, casoMenu = 0, tipo = 0, tam = 100;
+		int casoSalida = 0, casoMenu = 0, tipo = 0, tam = 100,secciont;
 		boolean estado;
 
 		Producto[] lista = new Producto[tam];
@@ -23,7 +23,8 @@ public class ppal {
 		do {
 			System.out.println("1 agregar producto\n"
 							 + "2 mostrar lista\n"
-							 + "3 ");
+							 + "3 buscar por seccion"
+							 + "4 calcular el pvp");
 			aux = sc.nextLine();
 			casoMenu = Integer.parseInt(aux);
 			switch (casoMenu) {
@@ -50,7 +51,15 @@ public class ppal {
 				break;
 				
 			case 3:
+				System.out.println("diga seccion");
+				aux = sc.nextLine();
+				secciont = Integer.parseInt(aux);
+				tien.mostrarLista(tien.findBySection(secciont));
+				break;
 				
+			case 4:
+				System.out.println("diga id de producto");
+				System.out.println("diga el procentaje de ganancia que quiere tener");
 				break;
 
 			case 0:

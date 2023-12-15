@@ -1,5 +1,7 @@
 package ejemplo1;
 
+import java.util.Iterator;
+
 public class Tienda {
 
 	private Producto [] lista;
@@ -41,5 +43,41 @@ public class Tienda {
 			System.out.println(lista[i]);
 		}
 	}
+	
+	public Producto[] findBySection(int section) {
+		Producto [] listadoNuevo = new Producto[numProd];
+		int i=0;
+		
+		while(i < numProd) {
+			if(lista[i].getSeccion() == section) {
+				listadoNuevo[i] = lista[i];
+			}
+			i++;
+		}
+		
+	return listadoNuevo;
+	}
+	
+	public Producto findById() {
+		
+	}
+	
+	public void mostrarLista(Producto [] lista) {
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i] != null)
+			System.out.println(lista[i]);
+		}
+	}
+	//porcen
+	public double calcularPVP(int iD,double porcentGanan) {
+		
+	}
+	/*public Producto buscarElMenorPrecio() {
+		Producto menor;
+		menor = lista[0];
+		for (int i = 0; i < numProd; i++) {
+			if()
+		}
+	}*/
 	
 }

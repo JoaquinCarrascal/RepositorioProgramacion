@@ -6,6 +6,7 @@ public class Producto {
 	private double precFabr;
 	private int seccion;
 	private boolean enVenta;
+	private int iD;
 	
 	public Producto(String nombreProd, double precFabr, int seccion, boolean enVenta) {
 		this.nombreProd = nombreProd;
@@ -44,6 +45,14 @@ public class Producto {
 
 	public void setEnVenta(boolean enVenta) {
 		this.enVenta = enVenta;
+	}
+
+	public int getiD() {
+		return iD;
+	}
+
+	public void setiD(int iD) {
+		this.iD = iD;
 	}
 
 	@Override

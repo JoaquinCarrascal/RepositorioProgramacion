@@ -1,5 +1,7 @@
 package ejercicio2;
-
+/**
+ * @author carrascal.frjoa24_tr
+ */
 public class Hotel {
 
 	private Habitacion lista[];
