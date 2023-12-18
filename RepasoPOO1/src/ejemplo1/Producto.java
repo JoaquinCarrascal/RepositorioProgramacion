@@ -4,6 +4,7 @@ public class Producto {
 
 	private String nombreProd;
 	private double precFabr;
+	private double pVP;
 	private int seccion;
 	private boolean enVenta;
 	private int iD;
@@ -13,6 +14,16 @@ public class Producto {
 		this.precFabr = precFabr;
 		this.seccion = seccion;
 		this.enVenta = enVenta;
+	}
+	public Producto(int iD,String nombreProd, double precFabr, int seccion, boolean enVenta) {
+		this.iD=iD;
+		this.nombreProd = nombreProd;
+		this.precFabr = precFabr;
+		this.seccion = seccion;
+		this.enVenta = enVenta;
+	}
+	public Producto() {
+		
 	}
 	
 	public String getNombreProd() {
@@ -55,6 +66,13 @@ public class Producto {
 		this.iD = iD;
 	}
 
+	public double getpVP() {
+		return pVP;
+	}
+	public void setpVP(double pVP) {
+		this.pVP = pVP;
+	}
+	
 	@Override
 	public String toString() {
 		return "Producto [nombreProd=" + nombreProd + ", precFabr=" + precFabr + ", seccion=" + seccion + ", enVenta="
