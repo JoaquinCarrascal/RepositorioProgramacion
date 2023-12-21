@@ -19,22 +19,41 @@ public class Principal {
 
 		Scanner sc = new Scanner(System.in);
 		String aux,nombre;
-		int tam = 100,casoMenu = 0, casoSalida= 0,categoria;
+		int tam = 100,casoMenu = 0, casoSalida= 0,categoria,dorsal=1,dorsalBusq = 0;
 		double tiempo;
 		Corredor [] lista = new Corredor[tam];
 		Carrera carr1 = new Carrera(lista);
 		
 		do {
-			System.out.println("1.- Agregar corredor");
+			System.out.println("1.- Agregar corredor\n"
+							 + "2.- Mostrar lista de corredores\n");
 			aux = sc.nextLine();
 			casoMenu = Integer.parseInt(aux);
 			
 			switch(casoMenu) {
 			case 1:
 				System.out.println("diga nombre");
+				nombre = sc.nextLine();
 				System.out.println("diga tiempo");
+				aux = sc.nextLine();
+				tiempo = Double.parseDouble(aux);
 				System.out.println("diga categoria");
+				aux = sc.nextLine();
+				categoria = Integer.parseInt(aux);
+				carr1.agregarCorredor(new Corredor(nombre,dorsal++,categoria,tiempo));
+				
 				break;
+			case 2:
+				System.out.println("Mostrar lista");
+				carr1.mostrarLista(lista);
+				break;
+			case 3:
+				System.out.println("Diga dorsal");
+				aux = sc.nextLine();
+				dorsalBusq = Integer.parseInt(aux);
+				System.out.println(carr1.buscarPorDorsal(dorsalBusq));
+				break;
+				
 			case 0:
 				System.out.println("Saliendo...");
 				break;

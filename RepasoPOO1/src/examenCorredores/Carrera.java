@@ -27,9 +27,35 @@ public class Carrera {
 	}
 
 	public void agregarCorredor(Corredor corredor) {
-		if(numCorredores<lista.length)
+		if(numCorredores<lista.length) {
 			lista[numCorredores++] = corredor;
+		}
 	}
+	
+	public void mostrarLista(Corredor [] lista) {
+		
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i]!=null)
+				System.out.println(lista[i]);
+		}
+		
+	}
+	
+	public Corredor buscarPorDorsal(int dorsalBusq) {
+		boolean encontrado = false;
+		int contador = 0;
+		while(contador < numCorredores && !encontrado) {
+			if(lista[contador].getDorsal()==dorsalBusq)
+				encontrado = true;
+			else
+				contador++;
+		}
+		if(encontrado)
+			return lista[contador];
+		else
+			return null;
+	}
+		
 	
 	
 	
