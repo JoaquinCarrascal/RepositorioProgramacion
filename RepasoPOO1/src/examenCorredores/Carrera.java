@@ -55,6 +55,22 @@ public class Carrera {
 		else
 			return null;
 	}
+	
+	public Corredor [] buscarVet() {
+		Corredor [] listaNueva = new Corredor[numCorredores];
+		int contador = 0;
+		while(contador<numCorredores) {
+			if(lista[contador] != null) {
+				if(lista[contador].getCategoria()==3) {
+					listaNueva[contador] = lista[contador];
+				}
+			}
+			contador++;
+		}
+		return listaNueva;
+	}
+	
+
 		
 	
 	

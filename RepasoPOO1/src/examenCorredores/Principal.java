@@ -23,10 +23,20 @@ public class Principal {
 		double tiempo;
 		Corredor [] lista = new Corredor[tam];
 		Carrera carr1 = new Carrera(lista);
+		Corredor c1 = new Corredor("wow",dorsal++,3,12);
+		Corredor c2 = new Corredor("wo",dorsal++,2,10);
+		Corredor c3 = new Corredor("w",dorsal++,1,11);
+		Corredor c4 = new Corredor("we",dorsal++,3,1);
+		carr1.agregarCorredor(c1);
+		carr1.agregarCorredor(c2);
+		carr1.agregarCorredor(c3);
+		carr1.agregarCorredor(c4);
 		
 		do {
 			System.out.println("1.- Agregar corredor\n"
-							 + "2.- Mostrar lista de corredores\n");
+							 + "2.- Mostrar lista de corredores\n"
+							 + "3.- buscar por dorsal\n"
+							 + "4.- Mostrar lista de veteranos\n");
 			aux = sc.nextLine();
 			casoMenu = Integer.parseInt(aux);
 			
@@ -53,6 +63,12 @@ public class Principal {
 				dorsalBusq = Integer.parseInt(aux);
 				System.out.println(carr1.buscarPorDorsal(dorsalBusq));
 				break;
+				
+			case 4:
+				carr1.mostrarLista(carr1.buscarVet());
+				break;
+				
+			
 				
 			case 0:
 				System.out.println("Saliendo...");
