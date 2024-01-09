@@ -45,5 +45,9 @@ public class Empleado extends Trabajador{
 		return sueldo - sueldo * impuestos/cien;
 	}
 	
+	public double calcularPagaV2() {
+		int cien = 100;
+		return super.calcularPagaV2() + sueldo - sueldo * impuestos/cien;
+	}
 
 }

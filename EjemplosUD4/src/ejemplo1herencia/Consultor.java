@@ -32,6 +32,22 @@ public class Consultor extends Trabajador {
 		return super.toString() + "Consultor [tarifa=" + tarifa + ", horas=" + horas + "]";
 	}
 	
+	public double calcularPaga() {
+		return tarifa * horas;
+	}
+	
+	public double calcularPagaV2() {
+		return super.calcularPagaV2() + tarifa * horas; //si la madre tiene un parámetro aunque
+														//la hija no lo use hay que pasarlo de todas formas
+														// sino sería una sobrecarga de métodos
+	}
+	
+	public void avisoExcesoTrabajo() {
+		int tope = 40;
+		if(horas>tope)
+			System.out.println("Este consultor ya ha superado las 40 horas semanales.");
+	}
+	
 	
 
 }

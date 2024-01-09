@@ -51,5 +51,9 @@ public class Trabajador {
 		return 0.0;
 	}
 	
+	public double calcularPagaV2() {
+		double fijo = 1000;
+		return fijo;
+	}
 
 }
