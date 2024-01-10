@@ -23,6 +23,8 @@ public class Sobremesa extends Ordenador{
 		return super.toString() + " Sobremesa [precioMontaje=" + precioMontaje + "]";
 	}
 	
-	
+	public double calcularPVP(double porcentGanan) {
+		return super.calcularPVP(porcentGanan) + precioMontaje;
+	}
 	
 }

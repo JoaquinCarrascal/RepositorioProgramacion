@@ -30,9 +30,15 @@ public class Portatil extends Ordenador {
 
 	@Override
 	public String toString() {
-		return super.toString() + " Portatil [seguroPantalla=" + seguroPantalla + ", precioSeguroPantalla=" + precioSeguroPantalla + "]";
+		return super.toString() + " Portatil [seguroPantalla=" + seguroPantalla 
+				+ ", precioSeguroPantalla=" + precioSeguroPantalla + "]";
 	}
 	
-	
+	public double calcularPVP(double porcentGanan) {
+		if(seguroPantalla)
+			return super.calcularPVP(porcentGanan) + precioSeguroPantalla;
+		else
+			return super.calcularPVP(porcentGanan);
+	}
 	
 }

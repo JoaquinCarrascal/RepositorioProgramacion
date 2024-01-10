@@ -52,6 +52,9 @@ public class Ordenador {
 				+ ", precioBase=" + precioBase + ", marca=" + marca + "]";
 	}
 	
-	
+	public double calcularPVP (double porcentGanan) {
+		int cien = 100;
+		return precioBase + precioBase * porcentGanan/cien;
+	}
 	
 }
