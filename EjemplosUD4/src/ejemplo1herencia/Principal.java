@@ -11,10 +11,16 @@ public class Principal {
 		
 		Empleado e2 = new Empleado("45996467D",2340,5);
 		
+		Consultor c1 = new Consultor("pepe","Consultor","45993891",20,30);
+		
 		System.out.println(t1);
 		System.out.println(e1);
 		System.out.println(e2);
 		
+		c1.avisoExcesoTrabajo();
+		e2.darDeBaja();
+		
+		System.out.println(e1);
 		
 		
 	}
