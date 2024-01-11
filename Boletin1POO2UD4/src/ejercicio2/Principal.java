@@ -9,6 +9,7 @@ public class Principal {
 
 		Scanner sc = new Scanner (System.in);
 		Carta cr1;
+		//Documento d1;
 		TarjetaDeVisita tdv1;
 		String aux,nombreEmpresa, direccionEmpresa,nombreCEO,datosPersonaDeContacto,fecha;
 		int casoMenu;
@@ -23,6 +24,9 @@ public class Principal {
 		direccionEmpresa = sc.nextLine();
 		System.out.println("Diga el nombre del dueño de la empresa");
 		nombreCEO = sc.nextLine();
+		
+		//d1 = new Documento (nombreEmpresa,direccionEmpresa,nombreCEO);
+		//d1.imprimirDocumento();
 		
 		switch(casoMenu) {
 		case 1:
