@@ -3,10 +3,13 @@ package ejercicio3;
 public class Furgoneta extends VehiculoAMotor{
 
 	public String marca;
+	public int cantidadImpuesto;
 
-	public Furgoneta(int tipoEmision, double caballos, int centimetrosCub, String marca) {
+	public Furgoneta(int tipoEmision, double caballos, int centimetrosCub
+			, String marca, int cantidadImpuesto) {
 		super(tipoEmision, caballos, centimetrosCub);
 		this.marca = marca;
+		this.cantidadImpuesto = cantidadImpuesto;
 	}
 
 	public String getMarca() {
@@ -17,8 +20,8 @@ public class Furgoneta extends VehiculoAMotor{
 		this.marca = marca;
 	}
 	
-	public double calculoImpuestoCirc() {
-		int cantidadFijaDeAplicacion = 123;
-		return super.calculoImpuestoCirc() + cantidadFijaDeAplicacion;
+	public double calculoImpuestoCirc(double porcentAplicacionMoto,double porcentAplicacionCoche) {
+		return super.calculoImpuestoCirc(porcentAplicacionMoto
+				,porcentAplicacionCoche) + cantidadImpuesto;
 	 }
 }

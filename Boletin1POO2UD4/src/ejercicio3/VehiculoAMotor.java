@@ -36,7 +36,7 @@ public class VehiculoAMotor {
 		this.centimetrosCub = centimetrosCub;
 	}
 	 
-	 public double calculoImpuestoCirc() {
+	/*public double calculoImpuestoCirc() {
 		 double rango1= 24,rango2 = 32, rango3=54,rango4=104;
 		 if(tipoEmision==0)
 			 return rango1;
@@ -46,6 +46,24 @@ public class VehiculoAMotor {
 			 return rango3;
 		 else
 			 return rango4;
+	 }*/
+	
+	 public double calculoImpuestoCirc(double porcentAplicacionMoto
+			 ,double porcentAplicacionCoche) {
+		 double rango1= 0,rango2 = 32, rango3=54,rango4=104;
+		 switch(tipoEmision) {
+		 case 0:
+			 return rango1;
+		 case 1:
+			 return rango2;
+		 case 2:
+			 return rango3;
+		 case 3:
+			 return rango4;
+		 default:
+			 return 0;
+		 }
+		 
 	 }
 	
 }

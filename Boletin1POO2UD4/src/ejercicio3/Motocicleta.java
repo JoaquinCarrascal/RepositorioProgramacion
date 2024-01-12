@@ -17,10 +17,12 @@ public class Motocicleta extends VehiculoAMotor{
 		this.marca = marca;
 	}
 	
-	public double calculoImpuestoCirc() {
-	double porcentAplicacion = 60;
+	public double calculoImpuestoCirc(double porcentAplicacionMoto
+			,double porcentAplicacionCoche) {
 	int cien = 100;
-		return super.calculoImpuestoCirc() + (getCentimetrosCub()*porcentAplicacion/cien);
+		return super.calculoImpuestoCirc(porcentAplicacionMoto
+				,porcentAplicacionCoche) + 
+				(getCentimetrosCub()*porcentAplicacionMoto/cien);
 	 }
 	
 }

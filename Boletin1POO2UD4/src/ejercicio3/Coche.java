@@ -17,9 +17,11 @@ public class Coche extends VehiculoAMotor{
 		this.marca = marca;
 	}
 	
-	public double calculoImpuestoCirc() {
-		double porcentImpuesto = 25;
+	public double calculoImpuestoCirc(double porcentAplicacionMoto
+			,double porcentAplicacionCoche) {
 		int cien = 100;
-		return super.calculoImpuestoCirc() + (getCaballos()*porcentImpuesto/cien);
+		return super.calculoImpuestoCirc(porcentAplicacionMoto
+				,porcentAplicacionCoche) + 
+				(getCaballos()*porcentAplicacionCoche/cien);
 	 }
 }

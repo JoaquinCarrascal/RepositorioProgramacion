@@ -12,8 +12,8 @@ public class Principal {
 		Coche coc;
 		Motocicleta mot;
 		Furgoneta fur;
-		int casoMenu,tipoEmision,cilindrada;
-		double caballos;
+		int casoMenu,tipoEmision,cilindrada,cantidadImpuestoCirc;
+		double caballos,porcentAplicacionMoto,porcentAplicacionCoche;
 		String nombre;
 		
 		System.out.println("Gestionar motocicleta(1), gestionar coche(2),gestionar furgoneta(3) ");
@@ -27,22 +27,34 @@ public class Principal {
 		System.out.println("Diga caballos del vehículo.");
 		aux = sc.nextLine();
 		caballos = Double.parseDouble(aux);
-		System.out.println("Diga centimetros cubicos del vehículo");
+		System.out.println("Diga centimetros cubicos del vehículo.");
 		aux = sc.nextLine();
 		cilindrada = Integer.parseInt(aux);
+		System.out.println("Diga porcentaje de aplicacion de impuesto a los coches.");
+		aux = sc.nextLine();
+		porcentAplicacionCoche = Double.parseDouble(aux);
+		System.out.println("Diga porcentaje de aplicacion de impuesto a las motos.");
+		aux = sc.nextLine();
+		porcentAplicacionMoto = Double.parseDouble(aux);
 		
 		switch(casoMenu) {
 		case 1:
 			mot = new Motocicleta(tipoEmision,caballos,cilindrada,nombre);
-			System.out.printf("El impuesto de circulacion de su motocicleta es: %.2f €.",mot.calculoImpuestoCirc());
+			System.out.printf("El impuesto de circulacion de su motocicleta es: %.2f €."
+					,mot.calculoImpuestoCirc(porcentAplicacionMoto,porcentAplicacionCoche));
 			break;
 		case 2:
 			coc = new Coche(tipoEmision,caballos,cilindrada,nombre);
-			System.out.printf("El impuesto de circulacion de su coche es: %.2f €.",coc.calculoImpuestoCirc());
+			System.out.printf("El impuesto de circulacion de su coche es: %.2f €."
+					,coc.calculoImpuestoCirc(porcentAplicacionMoto,porcentAplicacionCoche));
 			break;
 		case 3:
-			fur = new Furgoneta(tipoEmision,caballos,cilindrada,nombre);
-			System.out.printf("El impuesto de circulacion de su furgoneta es: %.2f €.",fur.calculoImpuestoCirc());
+			System.out.println("Diga impuesto de transporte de mercancías:");
+			aux = sc.nextLine();
+			cantidadImpuestoCirc = Integer.parseInt(aux);
+			fur = new Furgoneta(tipoEmision,caballos,cilindrada,nombre,cantidadImpuestoCirc);
+			System.out.printf("El impuesto de circulacion de su furgoneta es: %.2f €."
+					,fur.calculoImpuestoCirc(porcentAplicacionMoto,porcentAplicacionCoche));
 			break;
 		}
 		
