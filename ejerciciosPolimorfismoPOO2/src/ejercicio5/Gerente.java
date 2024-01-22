@@ -25,7 +25,7 @@ public class Gerente extends Empleado{
 	@Override
 	public double calcularSueldo() {
 		int cien = 100;
-		return super.calcularSueldo()+super.calcularSueldo()*impuestosSobreBase/cien;
+		return super.calcularSueldo()-super.calcularSueldo()*impuestosSobreBase/cien;
 	}
 	
 	

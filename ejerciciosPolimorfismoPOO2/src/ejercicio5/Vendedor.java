@@ -2,19 +2,19 @@ package ejercicio5;
 
 public class Vendedor extends Empleado{
 	
-	private int cantidadVentas;
+	private double cantidadVentas;
 	private double incentivo;
 	private int topeVenta;
 	
 	public Vendedor(String nombre, String apellidos, double sueldoBase, int numEmpleado,
-			int cantidadVentas,double incentivo,int topeVenta) {
+			double cantidadVentas,double incentivo,int topeVenta) {
 		super(nombre, apellidos, sueldoBase, numEmpleado);
 		this.cantidadVentas = cantidadVentas;
 		this.incentivo = incentivo;
 		this.topeVenta = topeVenta;
 	}
 
-	public int getCantidadVentas() {
+	public double getCantidadVentas() {
 		return cantidadVentas;
 	}
 
@@ -32,12 +32,14 @@ public class Vendedor extends Empleado{
 
 	@Override
 	public String toString() {
-		return "Vendedor cantidadVentas=" + cantidadVentas + ", incentivo=" + incentivo + super.toString();
+		return "Vendedor cantidadVentas=" + cantidadVentas + ", incentivo=" 
+				+ incentivo +", topeVenta=" + topeVenta + super.toString();
 	}
 
 	@Override
-	public double calcularSueldo() {//el vendedor tiene una ganancia de x por venta.
-		return super.calcularSueldo()+cantidadVentas*incentivo;
+	public double calcularSueldo() {
+		int cien = 100;
+		return super.calcularSueldo()+cantidadVentas*incentivo/cien;
 	}
 	
 	public boolean triggerVentas() {
