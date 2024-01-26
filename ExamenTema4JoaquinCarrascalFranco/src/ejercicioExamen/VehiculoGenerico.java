@@ -1,10 +1,10 @@
 package ejercicioExamen;
 
-public class VehiculoGenerico implements IAparcamiento{
+public class VehiculoGenerico implements IAparcamiento {
 
 	private String matricula;
-	private int tiempoEstacionado; //lo pongo int porque dice que solo cuenta minutos
-	
+	private int tiempoEstacionado; // lo pongo int porque dice que solo cuenta minutos
+
 	public VehiculoGenerico(String matricula, int tiempoEstacionado) {
 		this.matricula = matricula;
 		this.tiempoEstacionado = tiempoEstacionado;
@@ -35,5 +35,5 @@ public class VehiculoGenerico implements IAparcamiento{
 	public double calcularPrecio(double cantFija, double plusLongitud) {
 		return tiempoEstacionado * cantFija;
 	}
-	
+
 }

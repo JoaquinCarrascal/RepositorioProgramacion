@@ -1,6 +1,6 @@
 package ejercicioExamen;
 
-public class Moto extends VehiculoGenerico{
+public class Moto extends VehiculoGenerico {
 
 	private double cilindrada;
 
@@ -21,15 +21,14 @@ public class Moto extends VehiculoGenerico{
 	public String toString() {
 		return "Moto cilindrada= " + cilindrada + super.toString();
 	}
-	
+
 	@Override
 	public double calcularPrecio(double cantFija, double plusLongitud) {
 		int tope = 250;
 		double dos = 2.0;
-		if (cilindrada<tope) {
-			return super.calcularPrecio(cantFija, plusLongitud)/dos;
-		}
-		else
+		if (cilindrada < tope) {
+			return super.calcularPrecio(cantFija, plusLongitud) / dos;
+		} else
 			return super.calcularPrecio(cantFija, plusLongitud);
 	}
 
