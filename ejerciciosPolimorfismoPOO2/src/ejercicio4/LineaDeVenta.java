@@ -4,7 +4,7 @@ public class LineaDeVenta {
 
 	private Producto prod;
 	private int cantidad;
-	private double subtotal;
+	private double subtotal; //no suele ser un atributo porque no cuesta este calculo
 	
 	public LineaDeVenta(Producto prod, int cantidad) {
 		this.prod = prod;
