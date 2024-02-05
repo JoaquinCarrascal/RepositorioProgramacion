@@ -11,6 +11,10 @@ public class Nota {
 		this.id = id;
 		this.titulo = titulo;
 	}
+	
+	public Nota() {
+		
+	}
 
 	public String getCuerpo() {
 		return cuerpo;
