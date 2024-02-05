@@ -7,11 +7,11 @@ public class ppal {
 
 	public static void main(String[] args) 
 	{
-	
-		Figura f1 = new Cuadrado("cuadrado1",4);
-		Figura f2 = new Cuadrado("cuadrado2",4);
-		Figura f3 = new Cuadrado("cuadrado3",4);
-		Figura f0 = new Figura("figura1");
+		
+		Figura f1 = new Cuadrado("cuadrado1","123L",4);
+		Figura f2 = new Cuadrado("cuadrado2","321L",4);
+		Figura f3 = new Cuadrado("cuadrado3","123C",4);
+		Figura f0 = new Figura("figura1","321C");
 		
 		List <Figura> listado = new ArrayList <Figura>();
 		
@@ -19,6 +19,9 @@ public class ppal {
 		listado.add(f1);
 		listado.add(f2);
 		listado.add(f3);
+		listado.add(new Cuadrado("cuadrado4","123J",4));
+		
+		CRUDFigura crudFig = new CRUDFigura(listado);
 		
 		System.out.println(listado);
 		
@@ -29,6 +32,8 @@ public class ppal {
 		listado.remove(2);
 		
 		System.out.println(listado);
+		
+		System.out.println(crudFig.findById("123J"));
 
 	}
 

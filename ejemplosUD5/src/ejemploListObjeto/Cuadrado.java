@@ -4,8 +4,8 @@ public class Cuadrado extends Figura{
 
 	private int numLados;
 
-	public Cuadrado(String nombre, int numLados) {
-		super(nombre);
+	public Cuadrado(String nombre,String id, int numLados) {
+		super(nombre,id);
 		this.numLados = numLados;
 	}
 
