@@ -19,7 +19,9 @@ public class ppal {
 		listado.add(f1);
 		listado.add(f2);
 		listado.add(f3);
+		listado.add(f3);//el mismo que el de arriba
 		listado.add(new Cuadrado("cuadrado4","123J",4));
+		listado.add(new Cuadrado("cuadrado4","123J",4));//diferentes pero con los mismos atributos
 		
 		CRUDFigura crudFig = new CRUDFigura(listado);
 		
@@ -34,6 +36,10 @@ public class ppal {
 		System.out.println(listado);
 		
 		System.out.println(crudFig.findById("123J"));
+		
+		crudFig.borrar("123L");
+		
+		Impresion.imprimirLista(listado);
 
 	}
 

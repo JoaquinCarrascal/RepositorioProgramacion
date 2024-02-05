@@ -43,7 +43,9 @@ public class CRUDFigura {
 		listado.add(f);				//tampoco imprimimos si se ha guardado correcto
 	}
 	
-	
+	public void borrar(String id) {
+		listado.remove(findById(id));
+	}
 	
 	
 
