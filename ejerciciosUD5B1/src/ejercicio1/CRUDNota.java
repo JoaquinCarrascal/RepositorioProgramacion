@@ -43,8 +43,7 @@ public class CRUDNota {
 	}
 	
 	public void borrarNota(int ind) {
-		Nota n = new Nota();
-		if(listado.contains(n))
+		if(!listado.isEmpty())
 			listado.remove(ind-1);
 	}
 	
