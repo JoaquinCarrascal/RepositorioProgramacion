@@ -10,12 +10,12 @@ public class Principal {
 	Set <Alumno> listado = new HashSet<>();
 	CRUDAlumno crd1 = new CRUDAlumno(listado);
 	
-	listado.add(new Alumno("Carlos Ramón",5));
-	listado.add(new Alumno("Victor Tui",55));
-	listado.add(new Alumno("Cristóbal Aguilera",13));
-	listado.add(new Alumno("Jesus Fernandez",24));
-	listado.add(new Alumno("Abraham Carrascal",62));
-	listado.add(new Alumno("Daniel Martinez",10));
+	crd1.agregarAlumno(new Alumno("Carlos Ramón",5));
+	crd1.agregarAlumno(new Alumno("Victor Tui",55));
+	crd1.agregarAlumno(new Alumno("Cristóbal Aguilera",13));
+	crd1.agregarAlumno(new Alumno("Jesus Fernandez",24));
+	crd1.agregarAlumno(new Alumno("Abraham Carrascal",62));
+	crd1.agregarAlumno(new Alumno("Daniel Martinez",10));
 
 	crd1.mostrarLista();
 	System.out.println("------------------------------------------------");

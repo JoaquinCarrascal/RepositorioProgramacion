@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Principal {
@@ -16,7 +17,10 @@ public class Principal {
 		var auxiliar = 0.0;
 		//var auxiliar; //la variable ha de estar inicializada de lo contrario no puede funcionar
 		String regex = "[abc]";
-		Pattern.compile(regex,Pattern.UNICODE_CASE);
+		
+		Pattern miPatron = Pattern.compile(regex,Pattern.UNICODE_CASE);
+		
+		Matcher cadenaBusqueda = miPatron.matcher("Hola buenas a todos.");
 		
 		
 		Set <Persona> listadoTest = new HashSet<Persona>();

@@ -22,6 +22,10 @@ public class CRUDAlumno {
 	public String toString() {
 		return "CRUDAlumno [listaAlumno=" + listaAlumno + "]";
 	}
+	
+	public void agregarAlumno(Alumno a) {
+		listaAlumno.add(a);
+	}
 
 	public Alumno buscarXId(int id) {
 		if (listaAlumno.size() != 0) {
