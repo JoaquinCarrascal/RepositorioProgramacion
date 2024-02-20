@@ -16,11 +16,15 @@ public class Principal {
 		var texto4 = 4L; //con esta L le hemos dejado una pista de que este 4 es un Long
 		var auxiliar = 0.0;
 		//var auxiliar; //la variable ha de estar inicializada de lo contrario no puede funcionar
-		String regex = "[abc]";
+		String regex = "[a-z ]+";
 		
-		Pattern miPatron = Pattern.compile(regex,Pattern.UNICODE_CASE);
+		Pattern miPatron = Pattern.compile(regex,Pattern.CASE_INSENSITIVE);
 		
 		Matcher cadenaBusqueda = miPatron.matcher("Hola buenas a todos.");
+		
+		while(cadenaBusqueda.find()) {
+			System.out.println("Encontrado: " + cadenaBusqueda.group());
+		}
 		
 		
 		Set <Persona> listadoTest = new HashSet<Persona>();
