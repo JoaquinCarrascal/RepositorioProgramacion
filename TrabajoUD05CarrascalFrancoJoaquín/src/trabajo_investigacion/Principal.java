@@ -31,7 +31,11 @@ public class Principal {
 		Boolean encontradoBoolean = cadenaTest2.matches(patronTest2);
 		System.out.println("¿Hay palabras en la cadena entregada? : " + encontradoBoolean);
 				
-		
+		 Pattern myPattern = Pattern.compile("([a-zA-Z0-9._%-]+)@([a-zA-Z0-9.-]+).([a-zA-Z]{2,6})");
+		 Matcher myMatcher = myPattern.matcher("=&$/·!triana@salesianos.edu)=%·!!!!·$%%%");
+		 while (myMatcher.find()) {
+		    	System.out.println("Encontrado: " + myMatcher.group());
+		 }
 		
 		Set <Persona> listadoTest = new HashSet<Persona>();
 		
