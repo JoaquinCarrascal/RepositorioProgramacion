@@ -14,6 +14,7 @@ public class Principal {
 
 		c.agregar(new Contacto("Pepe Botika"), "655727434");
 		c.agregar(new Contacto("Roberto Iniesta"), "655727433");
+		c.agregar(new Contacto("Roberto Iniesta"), "655727433");
 		c.agregar(new Contacto("Franco Battiato"), "655727432");
 		c.agregar(new Contacto("Rob Swire"), "655727431");
 
@@ -28,6 +29,8 @@ public class Principal {
 		System.out.println("----------------------------------------------------------------------------------------------");
 		
 		c.imprimirAgenda();
+		
+		System.out.println(c.findByNombreV2("Roberto Iniesta"));//este devuelve list
 
 		
 

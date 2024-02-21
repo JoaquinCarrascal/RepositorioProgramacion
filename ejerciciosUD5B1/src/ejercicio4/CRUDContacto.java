@@ -1,7 +1,8 @@
 package ejercicio4;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class CRUDContacto {
 	
@@ -32,8 +33,7 @@ public class CRUDContacto {
 
 
 	public Contacto findByNombre (String nombre) {	
-		Set <Contacto> claves = agenda.keySet();
-		for (Contacto contacto : claves ) {
+		for (Contacto contacto : agenda.keySet()) {
 			if(contacto.getNombre().equals(nombre)) {
 				return contacto;
 			}
@@ -41,7 +41,15 @@ public class CRUDContacto {
 		return null;
 	}
 
-	 
+	public List <Contacto> findByNombreV2 (String nombre) {
+		List <Contacto> listadoAux = new ArrayList<>();
+		for (Contacto contacto : agenda.keySet()) {
+			if(contacto.getNombre().equals(nombre)) {
+				listadoAux.add(contacto);
+			}
+		}
+		return listadoAux;
+	}
 	
 	public void borrar(String nombre) {
 		if(findByNombre(nombre)!=null) {
@@ -50,7 +58,12 @@ public class CRUDContacto {
 	}
 	
 	public void modificarNombre(String nombre, String nuevoNombre) {
+		if(agenda.containsKey(findByNombre(nombre))) {
 		findByNombre(nombre).setNombre(nuevoNombre);
+		}
+		/*else {
+			TODO agregar si no esta en la lista
+		}*/
 	}
 	
 	public void modificarTlf(String nombre, String nuevoTlf) {

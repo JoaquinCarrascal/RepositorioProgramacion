@@ -26,6 +26,12 @@ public class Principal {
 			System.out.println("Encontrado: " + cadenaBusqueda.group());
 		}
 		
+		String patronTest2 = ".*[a-z ]+.*";
+		String cadenaTest2 = "&&%hola&&caracola";
+		Boolean encontradoBoolean = cadenaTest2.matches(patronTest2);
+		System.out.println("¿Hay palabras en la cadena entregada? : " + encontradoBoolean);
+				
+		
 		
 		Set <Persona> listadoTest = new HashSet<Persona>();
 		
