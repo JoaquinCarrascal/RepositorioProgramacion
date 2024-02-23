@@ -65,7 +65,7 @@ public class Principal {
 		int casoMenu = 0, casoSalida = 0,cero = 0,casoSubMenu = 0;
 		String aux,nombre,idTripulante,codLicencia,talla;
 		Double precioXHora,horasTrabajadas,descuento;
-
+		
 		Pattern miPatron = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 
 		Matcher cadenaBusqueda;
