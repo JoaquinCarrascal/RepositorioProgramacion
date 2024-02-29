@@ -11,8 +11,8 @@ public class Principal {
 		List <Trabajador> listado = new ArrayList<>();
 		CRUDTrabajador c1 = new CRUDTrabajador(listado);
 		c1.agregarTrabajador(new Trabajador("Juanito","1123",10,15));
-		c1.agregarTrabajador(new Trabajador("Pablito","2123",1,16));
-		c1.agregarTrabajador(new Trabajador("Jaimito","3123",1,17));
+		c1.agregarTrabajador(new Trabajador("Peter","2123",9,16));
+		c1.agregarTrabajador(new Trabajador("Jaimito","3123",9,17));
 		c1.agregarTrabajador(new Trabajador("Gonzalito","4123",1,15));
 		c1.agregarTrabajador(new Trabajador("Robertito","5123",9,10));
 		c1.agregarTrabajador(new Trabajador("Yo","6123",1,1000));
@@ -24,7 +24,9 @@ public class Principal {
 		}
 		
 		Collections.sort(listado);
+		
 		System.out.println();
+		
 		for (Trabajador trabajador : listado) {
 			System.out.println(trabajador);
 		}
