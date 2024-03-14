@@ -1,13 +1,21 @@
 package ejercicio2;
 
-import java.util.Set;
+import java.util.List;
 
 public class Operacion {
 
-	public Set <String> ordenarCadena(Set <String> cadena){
+	public List <String> ordenarCadena(List <String> listado){
 		
-		return 
+		return listado.stream().sorted().toList();
 		
 	}
+	
+	public String buscarCadena(List <String> listado , String cadena) {
+		
+		return listado.stream().filter(x -> x.equalsIgnoreCase(cadena)).toString();
+		
+	}
+	
+	
 	
 }
