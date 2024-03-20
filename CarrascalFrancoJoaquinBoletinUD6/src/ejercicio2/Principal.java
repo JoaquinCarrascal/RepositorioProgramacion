@@ -7,9 +7,13 @@ public class Principal {
 	public static void main(String[] args) {
 	
 		Scanner sc = new Scanner(System.in);
-		double temp1 = 0, temp2,tope = 273.15;
+		Calcular c = new Calcular();
+		double temp1 = 0, tope = -273.15;
+		boolean salida;
 		
 		do {
+			
+			salida = true;
 			
 			try {
 				
@@ -17,24 +21,27 @@ public class Principal {
 				
 				temp1 = Double.parseDouble(sc.nextLine());
 				
-				if(temp1 < tope) {
-					
-					throw new Exception();
-					
-				}else {
-					
-					temp2 = (temp1 * 9 / 5) + 32;
+				System.out.printf("Son: %.2f grados Fahrenheit.",c.calcularGradosFahrenheit(temp1, tope));
 				
-					System.out.printf("Son: %.2f Fahrenheit.",temp2);
-					
-				}
+				salida = false;
+				
+			}catch(AbsoluteCeroException a) {
+				
+				System.out.println("Parece que has intentado calcular por debajo del cero absoluto.");
+				
+			}catch(NumberFormatException n) {
+				
+				System.out.println("Introduce un número porfavor");
 				
 			}catch(Exception e) {
-				System.out.println("Parece que has intentado calcular por debajo del cero absoluto.");
+				
+				System.out.println("Error inesperado ):");
+				
 			}
 			
-		}while(temp1 < tope);
-
+		}while(salida);
+	
+		sc.close();
 	}
 
 }
